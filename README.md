@@ -108,10 +108,6 @@ has the following columns, for instance if `locus` is set to 'HLA-A'
 
 `HLA-A*02:01`- weight of evidence for HLA-A*02:01 relative to all evidence across all tested HLA-A alleles
 
-`HLA-A*02:05`- weight of evidence for HLA-A*02:05 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*02:06`- weight of evidence for HLA-A*02:06 relative to all evidence across all tested HLA-A alleles
-
 `HLA-A*03:01`- weight of evidence for HLA-A*03:01 relative to all evidence across all tested HLA-A alleles
 
 `HLA-A*11:01`- weight of evidence for HLA-A*11:01 relative to all evidence across all tested HLA-A alleles
@@ -120,27 +116,7 @@ has the following columns, for instance if `locus` is set to 'HLA-A'
 
 `HLA-A*24:02`- weight of evidence for HLA-A*24:02 relative to all evidence across all tested HLA-A alleles
 
-`HLA-A*25:01`- weight of evidence for HLA-A*25:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*26:01`- weight of evidence for HLA-A*26:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*29:01`- weight of evidence for HLA-A*29:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*29:02`- weight of evidence for HLA-A*29:02 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*30:01`- weight of evidence for HLA-A*30:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*30:02`- weight of evidence for HLA-A*30:02 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*31:01`- weight of evidence for HLA-A*31:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*32:01`- weight of evidence for HLA-A*32:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*33:01`- weight of evidence for HLA-A*33:01 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*33:03`- weight of evidence for HLA-A*33:03 relative to all evidence across all tested HLA-A alleles
-
-`HLA-A*68:01`- weight of evidence for HLA-A*68:01 relative to all evidence across all tested HLA-A alleles
+...
 
 `HLA-A*68:02 - weight of evidence for HLA-A*68:02 relative to all evidence across all tested HLA-A alleles
 
