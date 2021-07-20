@@ -176,7 +176,7 @@ The `weight_of_evidence()` function can called across a number of thresholds.
 #### Comments
 
 ##### Performance 
-![fig3_weight_of_evidence](https://user-images.githubusercontent.com/46639063/126399645-4f766df8-88d1-45b9-a6aa-9d24c5228cdd.png)
+![fig3_weight_of_evidence](https://user-images.githubusercontent.com/46639063/126401775-66fc0a39-9079-4947-b231-acdc70f58d2a.png)
 
 ##### Input Data By Allele
 ![fig1_training_data](https://user-images.githubusercontent.com/46639063/126399979-8af36f19-b867-459b-8509-c7f140d4c58f.png)
