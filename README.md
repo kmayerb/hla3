@@ -83,36 +83,67 @@ w = weight_of_evidence(hla_hits_df = df,
 The resulting DataFrame returned by weight_of_evidence()
 has the following columns, for instance if `locus` is set to 'HLA-A'
 
+
 `sample` - sample name
+
 `threshold` - threshold used for positivity call
+
 `method` - detection or counts
+
 `locus` - HLA locus considered
+
 `hla_1` - predicted HLA alelle with strongest weight of evidence if >= threshold
+
 `hla_2` - predicted HLA alelle with second strongest weight of evidence if >= threshold
+
 `v1` - weight of evidence value 1 associated with hla_1
+
 `v2` - weight of evidence value 2 associated with hla_1
+
 `p1` - predicted HLA alelle with strongest weight of evidence 
+
 `p2` - predicted HLA alelle with strongest weight of evidence 
+
 `HLA-A*01:01`- weight of evidence for HLA-A*01:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*02:01`- weight of evidence for HLA-A*02:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*02:05`- weight of evidence for HLA-A*02:05 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*02:06`- weight of evidence for HLA-A*02:06 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*03:01`- weight of evidence for HLA-A*03:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*11:01`- weight of evidence for HLA-A*11:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*23:01`- weight of evidence for HLA-A*23:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*24:02`- weight of evidence for HLA-A*24:02 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*25:01`- weight of evidence for HLA-A*25:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*26:01`- weight of evidence for HLA-A*26:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*29:01`- weight of evidence for HLA-A*29:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*29:02`- weight of evidence for HLA-A*29:02 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*30:01`- weight of evidence for HLA-A*30:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*30:02`- weight of evidence for HLA-A*30:02 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*31:01`- weight of evidence for HLA-A*31:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*32:01`- weight of evidence for HLA-A*32:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*33:01`- weight of evidence for HLA-A*33:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*33:03`- weight of evidence for HLA-A*33:03 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*68:01`- weight of evidence for HLA-A*68:01 relative to all evidence across all tested HLA-A alleles
+
 `HLA-A*68:02 - weight of evidence for HLA-A*68:02 relative to all evidence across all tested HLA-A alleles
+
 
 ### Performance
 
