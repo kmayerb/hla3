@@ -30,7 +30,7 @@ script assumes that the data has already been formated with
 TRBV genes using the IMGT nomenclature (i.e. TRBV2*01). 
 
 The diagnostic TCRs (`tests/HLA_associated_TCRs.tsv`) were previously identified by: 
-(DeWitt et al. 2018)(https://elifesciences.org/articles/38358) in 
+[DeWitt et al. 2018](https://elifesciences.org/articles/38358) in 
 **Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity.**
 
 Tabulate exact matches against diagnostic TCRs (for details `python hla/exact.py -h`). 
@@ -185,6 +185,11 @@ The `weight_of_evidence()` function can called across a number of thresholds.
 ![fig2_training_data](https://user-images.githubusercontent.com/46639063/126399980-03cc29fb-4389-41a1-8a7a-80f9c053c386.png)
 
 
+#### Citations
+
+Emerson, R. O., DeWitt, W. S., Vignali, M., Gravley, J., Hu, J. K., Osborne, E. J., ... & Robins, H. S. (2017). Immunosequencing identifies signatures of cytomegalovirus exposure history and HLA-mediated effects on the T cell repertoire. Nature genetics, 49(5), 659-665.
+
+DeWitt III, W. S., Smith, A., Schoch, G., Hansen, J. A., Matsen IV, F. A., & Bradley, P. (2018). Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity. Elife, 7, e38358.
 
 
 
