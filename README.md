@@ -1,21 +1,18 @@
 # hla3
 
+### Description
+
 FOR RESEARCH USE ONLY 
 
 This repository contains Python functions for 
 inferring HLA-alleles from bulk TCR beta chain data.
 
-### Purpose
-
-A weight of evidence predictor of host-HLA allele genotype 
-based on bulk TCR beta-chain repertoires. 
-
-This a simple approach attempting to infer whether an individual 
-does or does not express a particular HLA allele of interest.
+A simple weight of evidence predictor of host-HLA alleles
+based on bulk TCR beta-chain repertoires.
 
 ### Steps
 
-To attempt HLA inference, two steps are involved:
+Two steps are involved:
 
 1. Tabulate presence of diagnostic TCRs in bulk samples 
 2. Weigh the relative evidence of each HLA-allele per sample
