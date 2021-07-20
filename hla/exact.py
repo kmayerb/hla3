@@ -325,9 +325,9 @@ if __name__ == "__main__":
     parser.add_argument('--reference', 
         action="store",
         type = str,
-        default = 'tests/HLA_associated_TCRs.tsv',
+        default = 'data/HLA_associated_TCRs.tsv',
         required=True,
-        help = "")
+        help = "File containing HLA-diagnostic TCRs (data/HLA_associated_TCRs.tsv)")
     parser.add_argument('--resources', 
         action="store",
         type = str,
