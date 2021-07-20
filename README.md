@@ -172,6 +172,20 @@ In [12]: performance_summary_df.query('threshold == .1 & sens > .85 & TPs > 15')
 
 The `weight_of_evidence()` function can called across a number of thresholds. 
 
+### Simple Example 
+
+The example shows only 4 possible alleles but actual predictions are based on full set of alleles with diagnostic TCRs.
+
+![Simple Example](https://user-images.githubusercontent.com/46639063/126405039-d0f15c81-6d1d-419f-84fb-66efe2d31252.png)
+
+The main rationale behind using this relatively simple method is 
+to accomodate the uneven number of diagnostic features per alelle and the 
+differential sequence depth per sample. 
+
+The simple approach without feature weights also was selected to prevent a classifier from 
+over-fitting the relatively small amount of HLA-genotype training data. 
+
+As additional data become available, more sophisticated ensemble ML approaches will be incorporated. 
 
 #### Comments
 
