@@ -10,6 +10,13 @@ inferring HLA-alleles from bulk TCR beta chain data.
 A simple weight of evidence predictor of host-HLA alleles
 based on bulk TCR beta-chain repertoires.
 
+### Notes
+
+This method was used in:
+
+Mayer-Blackwell K, Schattgen S, Cohen-Lavi L, Crawford JC, Souquette A, Gaevert JA, Hertz T, Thomas PG, Bradley PH, Fiore-Gartland A. TCR meta-clonotypes for biomarker discovery with tcrdist3: quantification of public, HLA-restricted TCR biomarkers of SARS-CoV-2 infection. bioRxiv (2020, https://doi.org/10.1101/2020.12.24.424260).
+
+
 ### Steps
 
 Two steps are involved:
@@ -197,6 +204,12 @@ As additional data become available, more sophisticated ensemble ML approaches w
 
 
 #### Citations
+
+This method was used in:
+
+Mayer-Blackwell K, Schattgen S, Cohen-Lavi L, Crawford JC, Souquette A, Gaevert JA, Hertz T, Thomas PG, Bradley PH, Fiore-Gartland A. TCR meta-clonotypes for biomarker discovery with tcrdist3: quantification of public, HLA-restricted TCR biomarkers of SARS-CoV-2 infection. bioRxiv (2020, https://doi.org/10.1101/2020.12.24.424260).
+
+It uses data and insight from:
 
 Emerson, R. O., DeWitt, W. S., Vignali, M., Gravley, J., Hu, J. K., Osborne, E. J., ... & Robins, H. S. (2017). Immunosequencing identifies signatures of cytomegalovirus exposure history and HLA-mediated effects on the T cell repertoire. Nature genetics, 49(5), 659-665.
 
