@@ -1,5 +1,7 @@
 # hla3
 
+FOR RESEARCH USE ONLY 
+
 This repository contains Python functions for 
 inferring HLA-alleles from bulk TCR beta chain data.
 
