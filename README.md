@@ -31,7 +31,7 @@ TRBV genes using the IMGT nomenclature (i.e. TRBV2*01).
 
 The diagnostic TCRs (`tests/HLA_associated_TCRs.tsv`) were previously identified by: 
 [DeWitt et al. 2018](https://elifesciences.org/articles/38358) in 
-**Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity.**
+"Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity." *Elife* (10.7554/eLife.38358)
 
 Tabulate exact matches against diagnostic TCRs (for details `python hla/exact.py -h`). 
 
