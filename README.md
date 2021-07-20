@@ -173,7 +173,16 @@ In [12]: performance_summary_df.query('threshold == .1 & sens > .85 & TPs > 15')
 The `weight_of_evidence()` function can called across a number of thresholds. 
 
 
+#### Comments
 
+##### Performance 
+![fig3_weight_of_evidence](https://user-images.githubusercontent.com/46639063/126399645-4f766df8-88d1-45b9-a6aa-9d24c5228cdd.png)
+
+##### Input Data By Allele
+![fig1_training_data](https://user-images.githubusercontent.com/46639063/126399979-8af36f19-b867-459b-8509-c7f140d4c58f.png)
+
+##### Input Data By Allele and Probability of Generation
+![fig2_training_data](https://user-images.githubusercontent.com/46639063/126399980-03cc29fb-4389-41a1-8a7a-80f9c053c386.png)
 
 
 
