@@ -176,7 +176,7 @@ The `weight_of_evidence()` function can called across a number of thresholds.
 
 The example shows only 4 possible alleles but actual predictions are based on full set of alleles with diagnostic TCRs.
 
-![Simple Example](https://user-images.githubusercontent.com/46639063/126405039-d0f15c81-6d1d-419f-84fb-66efe2d31252.png)
+![Simple Example](https://user-images.githubusercontent.com/46639063/126405548-1a76e898-27c4-4ff4-b82c-262f6e125955.png)
 
 The main rationale behind using this relatively simple method is 
 to accomodate the uneven number of diagnostic features per alelle and the 
