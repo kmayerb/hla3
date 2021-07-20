@@ -203,4 +203,8 @@ Emerson, R. O., DeWitt, W. S., Vignali, M., Gravley, J., Hu, J. K., Osborne, E. 
 DeWitt III, W. S., Smith, A., Schoch, G., Hansen, J. A., Matsen IV, F. A., & Bradley, P. (2018). Human T cell receptor occurrence patterns encode immune history, genetic background, and receptor specificity. Elife, 7, e38358.
 
 
+#### Data
+
+Data from Emerson et al. 2017 is publicly available [here](https://clients.adaptivebiotech.com/pub/emerson-2017-natgen).
+
 
