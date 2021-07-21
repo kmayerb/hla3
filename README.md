@@ -5,10 +5,8 @@
 FOR RESEARCH USE ONLY 
 
 This repository contains Python functions for 
-inferring HLA-alleles from bulk TCR beta chain data.
-
-A simple weight of evidence predictor of host-HLA alleles
-based on bulk TCR beta-chain repertoires.
+inferring HLA-alleles from bulk TCR beta chain data, using 
+a simple weight of evidence predictor.
 
 ### Notes
 
