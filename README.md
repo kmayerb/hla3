@@ -122,7 +122,7 @@ has the following columns, for instance if `locus` is set to 'HLA-A'
 
 ...
 
-`HLA-A*68:02 - weight of evidence for HLA-A*68:02 relative to all evidence across all tested HLA-A alleles
+`HLA-A*68:02` - weight of evidence for HLA-A*68:02 relative to all evidence across all tested HLA-A alleles
 
 
 ### Performance
