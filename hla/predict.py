@@ -1,4 +1,6 @@
 """"
+FOR RESEARCH USE ONLY 
+
 Drafted Jan 6, 2021
 Updated July 20, 2021
 Seattle, WA
@@ -154,3 +156,69 @@ def weight_of_evidence(
     # Select desired columns for final output dataframe.
     result = top2_thresholded[['sample','threshold','method','locus','hla_1','hla_2','v1','v2','p1','p2']].merge(evidence, how = "left", on = "sample")
     return result
+
+if __name__ == "__main__":
+    import pandas as pd
+    import os
+    from predict import weight_of_evidence
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--threshold', 
+        action="store",
+        type = float,
+        default = 0.1,
+        required=True,
+        help = "")
+    parser.add_argument('--input', 
+        action="store",
+        type = str,
+        default = 'demo_files_vs_diagnostic_TCRS_templates.tsv',
+        required=True,
+        help = "")
+    parser.add_argument('--locus', 
+        action="store",
+        type = str,
+        default = 'HLA-A',
+        required=True,
+        help = "Select Locus HLA-A, HLA-B, HLA-C")
+    parser.add_argument('--use_detects', 
+        action="store",
+        type = str,
+        default = 1,
+        required=False,
+        help = "Use detects, set 1 to True")
+    parser.add_argument('--use_counts', 
+        action="store",
+        type = str,
+        default = 0,
+        required=False,
+        help = "Use counts, set 1 to True")
+    parser.add_argument('--outfile', 
+        action="store",
+        type = str,
+        default = 'test_demo_outfile.tsv',
+        required=True,
+        help = "filename or filepath to write predictions")
+
+    args = parser.parse_args()
+    for arg in vars(args):
+        print(f"{arg.upper()}={getattr(args, arg)}")
+
+    assert args.locus in ['HLA-A','HLA-B','HLA-C']
+    assert isinstance(float(args.threshold), float)
+    assert float(args.threshold) >= 0
+    assert float(args.threshold) <= 1
+    assert os.path.isfile(args.input)
+    assert isinstance(args.outfile, str)
+    
+    df = pd.read_csv(args.input, sep = '\t')
+    
+    w = weight_of_evidence(hla_hits_df = df, 
+        threshold = float(args.threshold), # 0.1
+        locus = args.locus, # 'HLA-A', 
+        use_detects =  bool(args.use_detects),
+        use_counts  =  bool(args.use_counts))
+    print(w)
+    print(f"WRITING {args.outfile}")
+    w.to_csv(args.outfile, sep = "\t", index = False)

@@ -219,3 +219,29 @@ DeWitt III, W. S., Smith, A., Schoch, G., Hansen, J. A., Matsen IV, F. A., & Bra
 Data from Emerson et al. 2017 is publicly available [here](https://clients.adaptivebiotech.com/pub/emerson-2017-natgen).
 
 
+####  Demo 
+
+To get a sense of how this work on a real example, download a couple of demo files (downloadable [here](https://www.dropbox.com/s/8rf0u6glzxxpzox/demo.zip?dl=1)). 
+The zip file is 3 MB. When unzipped the three files are approximated 35 MB. 
+
+```
+wget https://www.dropbox.com/s/8rf0u6glzxxpzox/demo.zip?dl=1
+unzip demo.zip?dl=1
+python hla/exact.py \
+    --outfile demo_files_vs_diagnostic_TCRS_templates.tsv \
+    --ncpus 3 \
+    --reference data/HLA_associated_TCRs.tsv \
+    --resources demo \
+    --strip_str .tsv.concise.tsv.tcrdist3.tsv \
+    --sep_str $"," \
+    --cols_to_match v_b_gene,cdr3_b_aa \
+    --cols_to_family v_b_gene \
+    --col_to_count count \
+    --endswith_str .tsv.concise.tsv.tcrdist3.tsv
+python hla/predict.py \
+    --threshold .1 \
+    --use_detects 1 \
+    --input demo_files_vs_diagnostic_TCRS_templates.tsv \
+    --locus HLA-A \
+    --outfile demo_files_prediction.tsv
+````
