@@ -308,7 +308,7 @@ def ts( ncpus,
         col_to_count,
         cols_to_match,
         cols_to_family,
-        count_occurence):
+        count_occurrence):
     """
     ts is a wrapper of the function t enabled by parmap
 
@@ -332,6 +332,7 @@ def ts( ncpus,
         cols_to_match = cols_to_match,
         cols_to_family = cols_to_family,
         convert_to_gene_family = convert_to_gene_family,
+        count_occurrence = count_occurrence,
         pm_processes = ncpus, 
         pm_pbar = True)
 
