@@ -317,6 +317,7 @@ def ts( ncpus,
         resources = resources,
         sep = sep,
         col_to_count = col_to_count,
+        cols_to_family = cols_to_family,
         convert_to_gene_family = convert_to_gene_family,
         pm_processes = ncpus, 
         pm_pbar = True)
@@ -420,7 +421,7 @@ if __name__ == "__main__":
     if cols_to_family is not None:
         convert_to_gene_family  =   True
     else: 
-        converst_to_gene_family  =   True
+        convert_to_gene_family  =   True
     cols_to_match           =   args.cols_to_match
 
     resources               =   args.resources
