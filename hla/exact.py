@@ -237,7 +237,8 @@ def t(filename,
       convert_to_gene_family = True,
       col_to_count = "count",
       cols_to_match = ['v_b_gene' ,'cdr3_b_aa'],
-      cols_to_family = ['v_b_gene']):
+      cols_to_family = ['v_b_gene'],
+      count_occurrence = False):
     """
     tabulate 
 
@@ -259,7 +260,8 @@ def t(filename,
         list of columns to compose into a match string
     cols_to_family : list
         list of columns to covert from gene to family level resolution
-
+    count_occurrence: bool
+        False, if True count clone breadth rather than sum templates
     Notes
     -----
     1. Optionally convert columns to their gene family representation
@@ -281,8 +283,13 @@ def t(filename,
         cols = cols_to_match, 
         sep_str = sep_str )
     df = df[['match', col_to_count]]
-    dfg = df.groupby(['match'])[col_to_count].sum().reset_index().\
-        sort_values(col_to_count, ascending = False).reset_index(drop = True)
+
+    if count_occurrence:
+        dfg = df.groupby(['match']).count().reset_index().\
+            sort_values(col_to_count, ascending = False).reset_index(drop = True)
+    else:
+        dfg = df.groupby(['match'])[col_to_count].sum().reset_index().\
+            sort_values(col_to_count, ascending = False).reset_index(drop = True)
     l = dfg.to_dict('split')['data']
     cnt ={x[0]: x[1] for x in l}
     return [cnt.get(x,0) for x in series]
@@ -300,7 +307,8 @@ def ts( ncpus,
         convert_to_gene_family,
         col_to_count,
         cols_to_match,
-        cols_to_family):
+        cols_to_family,
+        count_occurence):
     """
     ts is a wrapper of the function t enabled by parmap
 
@@ -411,6 +419,15 @@ if __name__ == "__main__":
         default = None ,
         required=False,
         help = "comma seperated list of files to run if a subset of files in resources")
+    parser.add_argument('--count_occurrence', 
+        action="store",
+        type = str,
+        default = None ,
+        required=False,
+        help = "False by Default, specify True if you want breadth instead of sum of templates")
+    
+
+    
     args = parser.parse_args()
     for arg in vars(args):
         print(f"{arg.upper()}={getattr(args, arg)}")
@@ -422,7 +439,14 @@ if __name__ == "__main__":
     cols_to_family          =   args.cols_to_family
     col_to_count            =   args.col_to_count
     cols_to_family          =   args.cols_to_family
+    count_occurence         =   args.count_occurrence
     
+    if count_occurence is not None:
+        count_occurence = True
+        print(f"USING OCCURRENCE FREQUENCY (I.E. BREADTH NOT SOME OF COUNTS)")
+    else:
+        count_occurence = False
+        
     if isinstance(cols_to_family, str):
         cols_to_family = cols_to_family.split(",")
         
@@ -471,7 +495,8 @@ if __name__ == "__main__":
             convert_to_gene_family = convert_to_gene_family,
             col_to_count           = col_to_count,
             cols_to_match          = cols_to_match ,
-            cols_to_family         = cols_to_family)
+            cols_to_family         = cols_to_family,
+            count_occurrence       = count_occurrence)
 
     print(f"WRITING {outfile}")
     x.to_csv(outfile, sep = "\t", index = False)
