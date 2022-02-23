@@ -440,7 +440,7 @@ if __name__ == "__main__":
     cols_to_family          =   args.cols_to_family
     col_to_count            =   args.col_to_count
     cols_to_family          =   args.cols_to_family
-    count_occurence         =   args.count_occurrence
+    count_occurrence        =   args.count_occurrence
     
     if count_occurence is not None:
         count_occurence = True
