@@ -442,11 +442,11 @@ if __name__ == "__main__":
     cols_to_family          =   args.cols_to_family
     count_occurrence        =   args.count_occurrence
     
-    if count_occurence is not None:
-        count_occurence = True
+    if count_occurrence is not None:
+        count_occurrence = True
         print(f"USING OCCURRENCE FREQUENCY (I.E. BREADTH NOT SOME OF COUNTS)")
     else:
-        count_occurence = False
+        count_occurrence = False
         
     if isinstance(cols_to_family, str):
         cols_to_family = cols_to_family.split(",")
