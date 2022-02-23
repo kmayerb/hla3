@@ -317,6 +317,7 @@ def ts( ncpus,
         resources = resources,
         sep = sep,
         col_to_count = col_to_count,
+        cols_to_match = cols_to_match,
         cols_to_family = cols_to_family,
         convert_to_gene_family = convert_to_gene_family,
         pm_processes = ncpus, 
@@ -426,7 +427,10 @@ if __name__ == "__main__":
     else: 
         convert_to_gene_family  =   True
     cols_to_match           =   args.cols_to_match
-
+    
+    if isinstance(cols_to_match, str):
+        cols_to_match = cols_to_match.split(",")
+    
     resources               =   args.resources
     filenames               =   args.filenames
     strip_str               =   args.strip_str
