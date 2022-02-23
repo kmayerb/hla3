@@ -418,6 +418,9 @@ if __name__ == "__main__":
     col_to_count            =   args.col_to_count
     cols_to_family          =   args.cols_to_family
     
+    if isinstance(cols_to_family, str):
+        cols_to_family = cols_to_family.split(",")
+        
     if cols_to_family is not None:
         convert_to_gene_family  =   True
     else: 
