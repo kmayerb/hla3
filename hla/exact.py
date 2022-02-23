@@ -270,6 +270,10 @@ def t(filename,
     """
     full_path = os.path.join(resources, filename)
     df = pd.read_csv(full_path, sep = sep)
+    
+    if 'count (templates/reads)' in df.columns:
+        df['templates'] = df['count (templates/reads)']
+    
     if convert_to_gene_family:
         for col in cols_to_family:
             df[col] = df[col].apply(lambda s : get_TRV_family(s))
